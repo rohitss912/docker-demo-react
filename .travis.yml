@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  -  docker build -t rohitss912/frontend-react -f Dockerfile.dev
+  -  docker build -t rohitss912/frontend-react -f Dockerfile.dev .
 
 script:
   - docker run rohitss912/frontend-react npm run test -- --coverage
